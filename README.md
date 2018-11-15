@@ -21,6 +21,14 @@ This code solves the 2D problem equivalent to the 1D problem above.
 The code uses the idea from Song et al of reducing the complexity of the 2D experimental matrix.
 The method of truncated SVD is implmented as well as a faster approach based on random projection.
 
+## Caveat
+This code is part of an ongoing project.
+It contains many parts not fully tested, or even non-functional.
+The sequence presented in the two main entries: `ILT_1D.py` and `ILT_2D.py` is functionnal though.
+This program has been develped for internal usage in CASC4DE.
+There is no warranty whatsoever for this program to actually execute correctly what it is meant for. 
+
+
 ## License
 This code is provided in a Free Open-Source form by CASC4DE: www.casc4de.eu
 
@@ -33,6 +41,7 @@ This program was mostly developped by
 
 - Lionel Chiron: lionel.chiron@gmail.com / lionel.chiron@casc4de.eu
 - Marc-André Delsuc: mad@delsuc.net
+- Laura Duciel: laura.duciel@casc4de.eu
 
 with the help of
 
