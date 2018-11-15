@@ -10,7 +10,7 @@ Given a a set of <a href="https://www.codecogs.com/eqnedit.php?latex=$N$" target
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=$$&space;E_n&space;=&space;\sum_{m=1}^M&space;exp(-S_m&space;T_n)&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$&space;E_n&space;=&space;\sum_{m=1}^M&space;exp(-S_m&space;T_n)&space;$$" title="$$ E_n = \sum_{m=1}^M exp(-S_m T_n) $$" /></a>
 
-it solves the Laplace problem and computes an estimate $\hat{S}$ of the Laplace spectrum $S$, assuming the positivity of the coefficients, by minimizing the least square estimate:
+it solves the Laplace problem and computes an estimate <a href="https://www.codecogs.com/eqnedit.php?latex=$$\hat{S}$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$\hat{S}$$" title="$$\hat{S}$$" /></a> of the Laplace spectrum <a href="https://www.codecogs.com/eqnedit.php?latex=$S$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$S$" title="$S$" /></a>, assuming the positivity of the coefficients, by minimizing the least square estimate:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=$$&space;LS&space;=&space;\sum_{n=1}^N&space;\left(&space;E_n&space;-&space;\sum_{m=1}^M&space;exp(-\hat{S}_m&space;T_n)&space;\right)^2&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$&space;LS&space;=&space;\sum_{n=1}^N&space;\left(&space;E_n&space;-&space;\sum_{m=1}^M&space;exp(-\hat{S}_m&space;T_n)&space;\right)^2&space;$$" title="$$ LS = \sum_{n=1}^N \left( E_n - \sum_{m=1}^M exp(-\hat{S}_m T_n) \right)^2 $$" /></a>
 
