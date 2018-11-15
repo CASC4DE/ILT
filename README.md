@@ -6,13 +6,13 @@ This Library is able to rapidly compute an estimate of the Inverse Laplace Trans
 It uses the Nonnegativity-constrained least squares code from J. Kim and H. Park, found in `nnls.py` (see details and reference therein).
 
 ## ILT_1D.py is for 1D data-sets.
-Given a a set of $N$ experimental points $E_n$, sampling at time $T_n$ the evolution of a damping signal, following the Laplace law:
+Given a a set of <a href="https://www.codecogs.com/eqnedit.php?latex=$N$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$N$" title="$N$" /></a> experimental points <a href="https://www.codecogs.com/eqnedit.php?latex=$E_n$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$E_n$" title="$E_n$" /></a>, sampling at time <a href="https://www.codecogs.com/eqnedit.php?latex=$T_n$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$T_n$" title="$T_n$" /></a> the evolution of a damping signal, following the Laplace law:
 
-$$ E_n = \sum_{m=1}^M exp(-S_m T_n) $$
+<a href="https://www.codecogs.com/eqnedit.php?latex=$$&space;E_n&space;=&space;\sum_{m=1}^M&space;exp(-S_m&space;T_n)&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$&space;E_n&space;=&space;\sum_{m=1}^M&space;exp(-S_m&space;T_n)&space;$$" title="$$ E_n = \sum_{m=1}^M exp(-S_m T_n) $$" /></a>
 
 it solves the Laplace problem and computes an estimate $\hat{S}$ of the Laplace spectrum $S$, assuming the positivity of the coefficients, by minimizing the least square estimate:
 
-$$ LS = \sum_{n=1}^N \left( E_n - \sum_{m=1}^M exp(-\hat{S}_m T_n) \right)^2 $$
+<a href="https://www.codecogs.com/eqnedit.php?latex=$$&space;LS&space;=&space;\sum_{n=1}^N&space;\left(&space;E_n&space;-&space;\sum_{m=1}^M&space;exp(-\hat{S}_m&space;T_n)&space;\right)^2&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$&space;LS&space;=&space;\sum_{n=1}^N&space;\left(&space;E_n&space;-&space;\sum_{m=1}^M&space;exp(-\hat{S}_m&space;T_n)&space;\right)^2&space;$$" title="$$ LS = \sum_{n=1}^N \left( E_n - \sum_{m=1}^M exp(-\hat{S}_m T_n) \right)^2 $$" /></a>
 
 It is is a direct application of `nnls.py`
 
@@ -45,5 +45,5 @@ This program was mostly developped by
 
 with the help of
 
-- Cammile Marin-Beluffi: camille.Beluffi@casc4de.eu
+- Camille Marin-Beluffi: camille.Beluffi@casc4de.eu
 
