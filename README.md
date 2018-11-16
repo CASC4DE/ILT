@@ -29,6 +29,19 @@ The sequence presented in the two main entries: `ILT_1D.py` and `ILT_2D.py` is f
 This program has been develped for internal usage in CASC4DE.
 There is no warranty whatsoever for this program to actually execute correctly what it is meant for. 
 
+## dependencies
+This programs depends on the following external libraries, which should be installed
+
+- numpy: www.numpy.org
+- scipy: www.scipy.org
+- bokeh: bokeh.pydata.org
+- jinja2: jinja.pocoo.org
+- matplotlib: matplotlib.org
+
+It also includes here parts of other open-source softwares, namely
+
+- SPIKE: www.bitbucket.org/Delsuc/SPIKE
+- nnlsm:  J. Kim and H. Park, (2011)
 
 ## License
 This code is provided in a Free Open-Source form by CASC4DE: www.casc4de.eu
