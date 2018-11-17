@@ -9,11 +9,10 @@ M. H. Van Benthem and M. R. Keenan, J. Chemometrics 2004; 18: 441-450
 
 Authors: L.Chiron and M-A Delsuc
 date 2017-2018
-license: CC BY-NC-SA
-    This work is licensed under a license 
-    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-    http://creativecommons.org/licenses/by-nc-sa/4.0/
+license: GPL v3
 
+for command usage, try
+>> python ILT_2D.py --help
 '''
 
 from __future__ import division, print_function
@@ -79,6 +78,8 @@ if __name__ == "__main__":
     data = args.data
     resolution = args.resolution
     kind = args.kind2D
+    if kind not in ('T2T2', 'T1T2', 'DT2'):
+        raise Exception('kind2D to choose among T2T2, T1T2, DT2')
     with_tt = " "
     if kind == 'T1T2':
         if args.inv_recov:
@@ -104,5 +105,20 @@ if __name__ == "__main__":
         sys.exit(0)
     if not os.path.exists(folder_proc):
         os.mkdir(folder_proc)
-
-    run_ILT2D(folder_proc, resolution, kind, T1T2satrecov, alpha2d, data, name_data)
+    try:
+        run_ILT2D(folder_proc, resolution, kind, T1T2satrecov, alpha2d, data, name_data)
+        print("""
+        ======================================================================
+                                 Processing complete
+        Check results in {}
+        ======================================================================
+    """.format(op.join(folder_proc, name_data)))
+    except:
+        import traceback
+        print("="*60)
+        print('Error:',traceback.format_exc().splitlines()[-1],'\n')
+        traceback.print_exc(limit=1)
+        print("="*60)
+        print("for command usage, try\n>> python ILT_2D.py --help")
+        sys.exit(1)
+    sys.exit(0)

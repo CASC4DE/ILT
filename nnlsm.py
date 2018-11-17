@@ -293,7 +293,7 @@ def normal_eq_comb(AtA, AtB, PassSet=None):
     #elif (PassSet == None) or np.all(PassSet):
     #elif (PassSet == None) or np.any(PassSet):
 
-    elif (PassSet == None).all() or PassSet.all():
+    elif (PassSet == None) or PassSet.all():
         # print("***** here *****")
         Z = nla.solve(AtA, AtB)
         num_cholesky = 1

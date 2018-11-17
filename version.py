@@ -2,10 +2,10 @@ from __future__ import division, print_function
 
 ProgramShort = 'ILT'
 ProgramName ='1D and 2D Inverse Laplace Transform'
-VersionName = 'Development version - beta'
+VersionName = 'Development version'
 version = 1.0
-revision = 1
-rev_date = '1-Nov-2018'
+revision = 2
+rev_date = '17-Nov-2018'
 
 def report():
     "prints version name when program starts"

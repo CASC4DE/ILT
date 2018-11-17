@@ -9,11 +9,10 @@ M. H. Van Benthem and M. R. Keenan, J. Chemometrics 2004; 18: 441-450
 
 Authors: L.Chiron and M-A Delsuc
 date 2017-2018
-license: CC BY-NC-SA
-    This work is licensed under a license 
-    Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-    http://creativecommons.org/licenses/by-nc-sa/4.0/
+license: GPL v3
 
+for command usage, try
+>> python ILT_1D.py --help
 '''
 from __future__ import division, print_function
 import os, sys
@@ -94,4 +93,20 @@ if __name__ == "__main__":
     if not os.path.exists(folder_proc):
         os.mkdir(folder_proc)
 
-    run_ILT1D(folder_proc, data, name_data, hight, lowt, alpha1d)
+    try:
+        run_ILT1D(folder_proc, data, name_data, hight, lowt, alpha1d)
+        print("""
+        ======================================================================
+                                 Processing complete
+        Check results in {}
+        ======================================================================
+    """.format(op.join(folder_proc, name_data)))
+    except:
+        import traceback
+        print("="*60)
+        print('Error:',traceback.format_exc().splitlines()[-1],'\n')
+        traceback.print_exc(limit=1)
+        print("="*60)
+        print("for command usage, try\n>> python ILT_1D.py --help")
+        sys.exit(1)
+    sys.exit(0)

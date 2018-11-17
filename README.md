@@ -5,13 +5,15 @@ This Library is able to rapidly compute an estimate of the Inverse Laplace Trans
 
 It uses the Nonnegativity-constrained least squares code from J. Kim and H. Park, found in `nnls.py` (see details and reference therein).
 
+It read data from Bruker 1D (fid) and 2D (ser) files
+
 ## ILT_1D.py is for 1D data-sets.
 Given a a set of *N* experimental points *En*, sampling at time *Tn* the evolution of a damping signal, following the Laplace law:
 
 <img src="https://latex.codecogs.com/gif.latex?E_n=\sum_{m=1}^MS_mexp(-D_m&space;T_n)" title="E_n=\sum_{m=1}^MS_mexp(-D_m T_n)" />
 
 where the *Dm* are sampling the Laplace axis;
-it solves the Laplace problem and computes an estimate <img src="https://latex.codecogs.com/gif.latex?\hat{S}" /> of the Laplace spectrum *S*, assuming the positivity of the coefficients, by minimizing the least square estimate:
+it solves the Laplace problem and computes an estimate <img src="https://latex.codecogs.com/gif.latex?\hat{S}" title="\hat{S}"/> of the Laplace spectrum *S*, assuming the positivity of the coefficients, by minimizing the least square estimate:
 
 <img src="https://latex.codecogs.com/gif.latex?LS=\sum_{n=1}^N\left(E_n-\sum_{m=1}^M\hat{S}_mexp(-D_mT_n)\right)^2" title="LS=\sum_{n=1}^N\left(E_n-\sum_{m=1}^M\hat{S}_mexp(-D_mT_n)\right)^2" />
 
@@ -30,6 +32,8 @@ This program has been develped for internal usage in CASC4DE.
 There is no warranty whatsoever for this program to actually execute correctly what it is meant for. 
 
 ## dependencies
+The program was tested with python 2.7 and python 3.6.
+
 This programs depends on the following external libraries, which should be installed
 
 - numpy: www.numpy.org
